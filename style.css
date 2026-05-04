@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.timer-wrapper {
+    text-align: center;
+    margin-top: -20px; 
+}
+
+#display {
+    font-family: 'Courier New', Courier, monospace;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    font-size: 18vw; 
+    font-weight: 1000;
+    color: #ffce5b;
+    text-shadow: 12px 12px 0px #4d402b;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+    min-width: 80vw;
+}
+
+.critical {
+    color: #ff4d4d !important;
+    text-shadow: 6px 6px 0px #4d402b !important;
+    animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+
+.controls {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    opacity: 0.2;
+    transition: opacity 0.5s;
+}
+
+.controls:hover {
+    opacity: 1;
+}
+
+input#minutesInput, 
+input#secondsInput {
+    width: 70px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #fcc464;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.input-controls {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+    opacity: 0.2; 
+    transition: opacity 0.5s;
+}
+
+.input-controls:hover {
+    opacity: 1;
+}
+
+
+button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.btn-start { background-color: #4caf50; }
+.btn-reset { background-color: #f44336; }
+
+button:active {
+    transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        background-size: cover; 
+    }
+
+    #display {
+        font-size: 25vw; 
+        text-shadow: 6px 6px 0px #4d402b; 
+        margin-top: 0; 
+    }
+
+    .input-controls {
+        transform: scale(0.8);
+        bottom: 20px;
+        position: absolute;
+        width: 100%;
+        opacity: 0.8; 
+    }
+    
+    input#minutesInput, 
+    input#secondsInput {
+        width: 60px;
+        padding: 8px;
+    }
+}
