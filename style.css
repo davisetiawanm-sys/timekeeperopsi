@@ -28,8 +28,8 @@ body, html {
     font-family: 'Courier New', Courier, monospace;
     font-size: 20vw;
     font-weight: 900;
-    color: #fcc464;
-    text-shadow: 20px 20px 5px #4d402b; 
+    color: #ffce5b;
+    text-shadow: 20px 20px 0px #4d402b; 
     font-variant-numeric: tabular-nums; 
     line-height: 1;
     text-align: center;
@@ -123,8 +123,8 @@ button:active { transform: scale(0.95); }
 }
 
 #display.poi-active {
-    color: #82ccdd !important; 
-    text-shadow: 14px 14px 0px #0a3d62 !important;
+    color: #c0d634 !important; 
+    text-shadow: 20px 20px 0px #363827 !important;
 }
 
 @keyframes pulse {
