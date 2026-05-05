@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,37 @@
 </head>
 <body>
     <div class="main-container">
-        <!-- Timer Section -->
-        <div class="timer-section">
+        <div class="timer-wrapper">
+            <!-- Teks fase sudah dihapus agar lebih clean -->
             <h1 id="display">00:00</h1>
-                <div class="input-controls">
-                     <input type="number" id="minutesInput" placeholder="Min" min="0">
-                    <input type="number" id="secondsInput" placeholder="Sec" min="0" max="59">
-                    <button onclick="startTimer()" class="btn-start">START</button>
-                    <button onclick="resetTimer()" class="btn-reset">RESET</button>
+            
+            <div class="input-controls">
+                <div class="input-row">
+                    <div class="input-group">
+                        <span>Fase 1:</span>
+                        <input type="number" id="m1" placeholder="Min" min="0">
+                        <input type="number" id="s1" placeholder="Sec" min="0" max="59">
+                    </div>
+                    <div class="input-group">
+                        <span>Fase 2:</span>
+                        <input type="number" id="m2" placeholder="Min" min="0">
+                        <input type="number" id="s2" placeholder="Sec" min="0" max="59">
+                    </div>
+                    <div class="input-group">
+                        <span>Fase 3:</span>
+                        <input type="number" id="m3" placeholder="Min" min="0">
+                        <input type="number" id="s3" placeholder="Sec" min="0" max="59">
+                    </div>
                 </div>
+
+                <div class="button-group">
+                    <button onclick="startTimer()" class="btn-start">START</button>
+                    <button onclick="pauseTimer()" class="btn-pause" id="pauseBtn">PAUSE</button>
+                    <button onclick="triggerPOI()" class="btn-poi">INTERUPSI (30s)</button>
+                    <button onclick="resetTimer()" class="btn-reset">RESET</button>
+                    <button onclick="toggleCommand()" id="cmdBtn" class="btn-cmd">CMD: OFF</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
